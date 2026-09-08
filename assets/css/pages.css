@@ -1,0 +1,166 @@
+/* ============================================================
+   Shared inner pages · footer · responsive
+   ============================================================ */
+
+/* ---------- 02 · Founder's Philosophy ---------- */
+.philosophy-grid {
+  display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  gap: clamp(32px, 5vw, 90px);
+  align-items: start;
+}
+.philosophy-aside { position: sticky; top: 120px; }
+.philosophy-quote {
+  margin-top: 34px;
+  font-family: var(--serif); font-style: italic;
+  font-size: clamp(17px, 1.9vw, 21px); line-height: 1.6;
+  color: var(--ink-3);
+  max-width: 24ch;
+}
+.philosophy-main { padding-top: clamp(20px, 4vw, 60px); }
+.philosophy-copy {
+  margin-top: clamp(28px, 4vw, 48px);
+  max-width: 46ch;
+  font-size: clamp(14.5px, 1.4vw, 16.5px);
+}
+.philosophy .closing { margin-top: clamp(48px, 7vw, 96px); }
+
+/* ---------- 03 · The House ---------- */
+.house-grid {
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(40px, 6vw, 110px);
+  align-items: start;
+}
+.house-head .display { margin-top: 28px; }
+.house-copy p + p { margin-top: 1.5em; }
+.house-kannada { margin-top: clamp(34px, 5vw, 60px); font-size: clamp(24px, 3.4vw, 44px); color: var(--old-brass); font-style: normal; letter-spacing: 0.04em; }
+
+/* ---------- 06 · Portfolio — magazine, no cards ---------- */
+.portfolio-head { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(24px, 4vw, 80px); align-items: end; }
+.portfolio-head .display { margin-top: 22px; }
+.mag {
+  display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
+  gap: clamp(28px, 4.5vw, 80px);
+  align-items: center;
+  margin-top: clamp(70px, 9vw, 140px);
+}
+.mag-visual { position: relative; overflow: hidden; }
+.mag-visual img { width: 100%; height: auto; display: block; }
+.mag-plate {
+  display: block; margin-top: 16px;
+  font-size: 10px; letter-spacing: 0.36em; text-transform: uppercase;
+  color: var(--ink-3);
+}
+.mag-text { position: relative; }
+.mag-index {
+  position: absolute; top: -8px; left: -6px;
+  font-family: var(--serif); font-size: 12px; letter-spacing: 0.3em;
+  color: var(--old-brass);
+}
+.mag-text .eyebrow { margin-top: 26px; }
+.mag-text .display { margin-top: 22px; font-size: clamp(34px, 5vw, 78px); }
+.mag-text .copy { margin-top: 26px; }
+.mag-text .link-arrow { margin-top: 34px; }
+
+/* ---------- 07 · Next Chapter ---------- */
+.next-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: clamp(40px, 6vw, 110px); align-items: start; }
+.next-main .display { margin-top: 26px; }
+.next-copy .copy { margin-top: 30px; }
+.next-await { margin-top: clamp(34px, 5vw, 60px); font-size: clamp(22px, 3vw, 38px); }
+
+/* ---------- 08 · Footer — quiet, typographic ---------- */
+.site-footer {
+  position: relative;
+  background-color: var(--temple-black); color: var(--cream);
+  padding: clamp(80px, 11vw, 150px) 0 clamp(40px, 6vw, 64px);
+  overflow: hidden;
+}
+.site-footer::before {
+  content: ""; position: absolute; top: 0; left: var(--pad); right: var(--pad); height: 1px;
+  background: linear-gradient(90deg, transparent, var(--hairline-dark) 40%, var(--hairline-dark) 60%, transparent);
+}
+.footer-voice .display { color: var(--cream); font-size: clamp(38px, 6.4vw, 96px); }
+.footer-voice .kannada { display: block; margin-top: 26px; color: var(--muted-sand); letter-spacing: 0.14em; font-size: clamp(16px, 1.8vw, 20px); }
+.footer-grid {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(40px, 5vw, 80px);
+  margin-top: clamp(60px, 8vw, 110px);
+}
+.footer-col h4 { font-size: 10px; letter-spacing: 0.44em; text-transform: uppercase; color: var(--cream-3); margin-bottom: 22px; font-weight: 400; }
+.footer-col a { display: block; font-size: 14px; color: var(--cream-2); padding: 6px 0; transition: color 0.4s var(--ease); }
+.footer-col a:hover { color: var(--muted-sand); }
+.footer-col--brand { display: flex; align-items: flex-start; justify-content: flex-end; }
+.f-mark { width: 64px; opacity: 0.5; }
+.f-mark img { width: 100%; height: auto; }
+.footer-base {
+  margin-top: clamp(48px, 7vw, 90px); padding-top: 26px;
+  border-top: 1px solid rgba(248, 244, 236, 0.08);
+  display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap;
+  font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--cream-3);
+}
+.footer-base .fb-rule { height: 1px; flex: 1; background: linear-gradient(90deg, var(--hairline-dark), transparent); }
+
+/* ---------- Inner pages: About / Ventures / Enquire ---------- */
+.about-story { position: relative; overflow: hidden; }
+.about-story-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(40px, 6vw, 110px); align-items: start; }
+.about-story-aside { position: sticky; top: 120px; }
+.about-story-aside .thindi-ornament { width: 120px; color: var(--old-brass); margin-top: 30px; }
+.about-story-copy p { font-size: clamp(16px, 1.6vw, 18px); color: var(--ink-2); margin-bottom: 1.6em; max-width: 62ch; line-height: 1.85; }
+.about-story-copy p:first-child::first-letter {
+  font-family: var(--serif); font-weight: 500; float: left;
+  font-size: 4.4em; line-height: 0.82; padding: 0.04em 0.12em 0 0;
+  color: var(--old-brass);
+}
+.about-story-copy .kannada { color: var(--old-brass); }
+
+.values-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--hairline-soft); border: 1px solid var(--hairline-soft); margin-top: 48px; }
+.value-block { background: var(--ivory-paper); padding: clamp(36px, 4.5vw, 64px); position: relative; }
+.value-block .vb-num { font-family: var(--serif); font-size: 14px; letter-spacing: 0.34em; color: var(--old-brass); }
+.value-block h3 { font-family: var(--serif); font-weight: 500; font-size: clamp(23px, 3vw, 32px); letter-spacing: 0.04em; color: var(--ink); margin: 18px 0 12px; }
+.value-block p { font-size: 14.5px; color: var(--ink-2); max-width: 48ch; }
+
+.editorial { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(40px, 6vw, 110px); align-items: start; }
+.editorial p { font-size: clamp(16px, 1.6vw, 18px); color: var(--ink-2); margin-bottom: 1.5em; max-width: 58ch; }
+
+.portfolio-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-top: 56px; }
+
+/* Contact */
+.contact-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(48px, 7vw, 110px); align-items: start; }
+.field { margin-bottom: clamp(22px, 3vw, 30px); }
+.field label { display: block; font-size: 10px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--old-brass); margin-bottom: 10px; }
+.field input, .field textarea, .field select {
+  width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--hairline);
+  color: var(--ink); font-family: var(--sans); font-weight: 300;
+  font-size: 16px; padding: 8px 0; outline: none;
+   border-image: var(--metal-line) 1;
+   transition: border-color 0.5s var(--ease);
+}
+.field select { cursor: pointer; }
+.field input:focus, .field textarea:focus, .field select:focus { border-bottom-color: var(--old-brass); }
+.field textarea { resize: vertical; min-height: 90px; }
+.form-success {
+  display: none; margin-top: 26px; padding: 18px 22px;
+  border: 1px solid var(--hairline);
+  font-family: var(--serif); font-style: italic; font-size: 17px; color: var(--old-brass);
+}
+.form-success.visible { display: block; animation: fadeIn 0.6s var(--ease); }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.contact-detail { padding: 22px 0; border-bottom: 1px solid var(--hairline-soft); }
+.contact-detail .cd-label { font-size: 10px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--old-brass); }
+.contact-detail p { font-family: var(--serif); font-size: clamp(17px, 2vw, 21px); color: var(--ink); margin-top: 8px; line-height: 1.5; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1020px) {
+  .philosophy-grid, .house-grid, .portfolio-head, .about-story-grid, .editorial, .next-grid { grid-template-columns: 1fr; }
+  .philosophy-aside, .about-story-aside { position: static; }
+  .values-grid { grid-template-columns: 1fr; }
+  .portfolio-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+   .mag { grid-template-columns: 1fr; }
+  .mag-visual { order: -1; }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 767px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-col--brand { display: none; }
+}
