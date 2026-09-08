@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" fill="none" role="img" aria-label="Carved medallion">
+  <!-- Outer carved band -->
+  <path d="M20,420 A300,300 0 0 1 620,420" stroke="currentColor" stroke-width="5"/>
+
+  <!-- Beaded band -->
+  <path d="M52,420 A268,268 0 0 1 588,420" pathLength="100" stroke-dasharray="0.1 5.3" stroke-linecap="round" stroke-width="6"/>
+
+  <!-- Inner fine arc -->
+  <path d="M84,420 A236,236 0 0 1 556,420" stroke="currentColor" stroke-width="2.5"/>
+
+  <!-- Hanging lotus petals -->
+  <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+    <path d="M-3,0 C2,11 3,18 0,24 C-3,18 -2,11 -3,0 Z" transform="translate(320,184)"/>
+    <path d="M-3,0 C2,11 3,18 0,24 C-3,18 -2,11 -3,0 Z" transform="translate(272,189)"/>
+    <path d="M-3,0 C2,11 3,18 0,24 C-3,18 -2,11 -3,0 Z" transform="translate(368,189)"/>
+    <path d="M-3,0 C2,11 3,18 0,24 C-3,18 -2,11 -3,0 Z" transform="translate(232,201)"/>
+    <path d="M-3,0 C2,11 3,18 0,24 C-3,18 -2,11 -3,0 Z" transform="translate(408,201)"/>
+  </g>
+
+  <!-- Corner rosettes -->
+  <g transform="translate(20,420)" stroke="currentColor">
+    <circle r="8" stroke-width="2"/>
+    <circle r="19" stroke-width="1.5" opacity="0.55"/>
+    <g stroke-width="1.5">
+      <path d="M0,-8 v-11 M0,8 v11 M-8,0 h-11 M8,0 h11"/>
+    </g>
+  </g>
+  <g transform="translate(620,420)" stroke="currentColor">
+    <circle r="8" stroke-width="2"/>
+    <circle r="19" stroke-width="1.5" opacity="0.55"/>
+    <g stroke-width="1.5">
+      <path d="M0,-8 v-11 M0,8 v11 M-8,0 h-11 M8,0 h11"/>
+    </g>
+  </g>
+
+  <!-- Paisley spandrels -->
+  <g fill="currentColor">
+    <path d="M-8,0 C8,-4 18,6 16,16 C14,26 2,30 -6,22 C-13,15 -14,2 -8,0 Z" transform="translate(150,212) rotate(200)"/>
+    <circle cx="4" cy="16" r="2.5" transform="translate(150,212) rotate(200)"/>
+    <path d="M8,0 C-8,-4 -18,6 -16,16 C-14,26 -2,30 6,22 C13,15 14,2 8,0 Z" transform="translate(490,212) rotate(-200)"/>
+    <circle cx="-4" cy="16" r="2.5" transform="translate(490,212) rotate(-200)"/>
+  </g>
+
+  <!-- The jeweled vel — central finial -->
+  <g stroke="currentColor">
+    <path d="M320,57 V120" stroke-width="2.5"/>
+    <path d="M315,27 C311,38 314,52 320,57 C326,52 329,38 325,27 Z" fill="currentColor"/>
+    <path d="M316,27 h8" stroke-width="2"/>
+    <circle cx="320" cy="18" r="9" fill="#8A1E2E" stroke-width="2"/>
+    <path d="M312,114 C307,109 307,101 312,97 C317,101 317,109 312,114 Z" fill="currentColor" opacity="0.9"/>
+    <path d="M328,114 C333,109 333,101 328,97 C323,101 323,109 328,114 Z" fill="currentColor" opacity="0.9"/>
+  </g>
+</svg>

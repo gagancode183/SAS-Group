@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" fill="none" role="img" aria-label="Paisley ornament">
+  <g stroke="currentColor" stroke-width="1">
+    <path d="M8,20 h56"/>
+    <path d="M136,20 h56"/>
+    <circle cx="72" cy="20" r="2"/>
+    <circle cx="128" cy="20" r="2"/>
+  </g>
+  <g fill="currentColor">
+    <path d="M100,4 C114,10 121,22 116,32 C111,42 92,41 86,30 C81,19 90,5 100,4 Z"/>
+    <circle cx="101" cy="19" r="2.4"/>
+  </g>
+</svg>

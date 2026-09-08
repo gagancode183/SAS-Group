@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon | Sri Aadi Subramanya Group</title>
+  <meta name="description" content="Sri Aadi Subramanya Group is preparing its next chapter from Karnataka, India.">
+  <link rel="icon" type="image/png" href="../assets/img/favicon-64.png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
+  <style>
+    :root {
+      --ink: #15120D;
+      --ink-2: #1B1712;
+      --gold: #C6A15B;
+      --gold-bright: #E9CD8C;
+      --gold-dim: #8B713E;
+      --parchment: #F4ECDD;
+      --parchment-dim: #B8AFA0;
+      --maroon: #8A3A32;
+      --serif: "Fraunces", Georgia, serif;
+      --sans: "Sora", "Helvetica Neue", Arial, sans-serif;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html, body { min-height: 100%; }
+
+    body {
+      margin: 0;
+      background: var(--ink);
+      color: var(--parchment);
+      font-family: var(--sans);
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
+
+    button, input { font: inherit; }
+    a { color: inherit; }
+
+    .page-shell {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 100svh;
+      isolation: isolate;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 48% 38% at 50% 43%, rgba(198, 161, 91, 0.075), transparent 73%),
+        radial-gradient(ellipse 80% 80% at 50% 48%, var(--ink-2), var(--ink) 74%);
+    }
+
+    .page-shell::before {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      content: "";
+      pointer-events: none;
+      opacity: 0.19;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.76' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
+      mix-blend-mode: soft-light;
+    }
+
+    .page-shell::after {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      content: "";
+      pointer-events: none;
+      background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.25) 100%);
+    }
+
+    .topbar,
+    .site-footer {
+      width: min(100% - 48px, 1120px);
+      margin-inline: auto;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 35px 0 24px;
+    }
+
+    .header-brand {
+      color: var(--parchment);
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.13em;
+      line-height: 1.45;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .header-brand span { display: block; }
+    .header-brand small {
+      display: block;
+      color: var(--gold);
+      font-size: 8px;
+      font-weight: 400;
+      letter-spacing: 0.38em;
+      line-height: 1.4;
+    }
+
+    .quiet-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--parchment-dim);
+      font-size: 10px;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .quiet-status__dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--maroon);
+      box-shadow: 0 0 0 0 rgba(138, 58, 50, 0.48);
+      animation: statusPulse 3.2s ease-out infinite;
+    }
+
+    .main-content {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 20px 24px 64px;
+    }
+
+    .sanctum {
+      width: min(100%, 600px);
+      text-align: center;
+    }
+
+    .emblem-stage {
+      position: relative;
+      width: min(78vw, 420px);
+      margin-inline: auto;
+      aspect-ratio: 1;
+      --drift-x: 0px;
+      --drift-y: 0px;
+    }
+
+    .mandala {
+      display: block;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      transform: translate3d(var(--drift-x), var(--drift-y), 0);
+      transform-origin: center;
+    }
+
+    .mandala-shell,
+    .ring-draw,
+    .original-logo-core,
+    .wordmark-lockup {
+      will-change: opacity, transform;
+    }
+
+    .mandala-shell { transform-box: fill-box; transform-origin: center; }
+
+    .ring-draw {
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+    }
+
+    .outer-orbit {
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    .ring {
+      fill: none;
+      stroke: var(--gold);
+      stroke-linecap: round;
+    }
+
+    .ring--outer { opacity: 0.62; stroke-width: 0.75; }
+    .ring--outer-detail { opacity: 0.28; stroke-width: 0.5; stroke-dasharray: 1 7; }
+    .ring--middle { opacity: 0.72; stroke-width: 0.75; }
+    .ring--inner { opacity: 0.92; stroke: var(--gold-bright); stroke-width: 0.9; }
+    .ray { stroke: var(--gold-dim); stroke-width: 0.65; opacity: 0.52; }
+    .petal { fill: none; stroke: var(--gold); stroke-width: 0.65; opacity: 0.54; }
+    .center-disc { fill: var(--ink-2); stroke: var(--gold); stroke-width: 0.8; opacity: 0.98; }
+
+    .original-logo-core {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 96px;
+      height: 96px;
+      overflow: hidden;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transform-origin: center;
+    }
+
+    /* The source lockup is tall; this frame reveals its original monogram without duplicating the wordmark below. */
+    .original-logo-core img {
+      position: absolute;
+      top: -133px;
+      left: 50%;
+      width: 225px;
+      max-width: none;
+      transform: translateX(-50%);
+    }
+
+    .wordmark-lockup {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 7px;
+      margin-top: 11px;
+      color: var(--gold);
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      line-height: 1.2;
+      text-indent: 0.28em;
+    }
+
+    .wordmark-lockup span:last-child {
+      color: var(--parchment-dim);
+      font-size: 8px;
+      letter-spacing: 0.55em;
+      text-indent: 0.55em;
+    }
+
+    .sanctum-divider {
+      width: 1px;
+      height: 47px;
+      margin: 27px auto 25px;
+      background: linear-gradient(to bottom, rgba(198, 161, 91, 0.9), rgba(139, 113, 62, 0.22));
+    }
+
+    .headline {
+      max-width: 600px;
+      margin: 0 auto;
+      color: var(--parchment);
+      font-family: var(--serif);
+      font-size: clamp(35px, 5.3vw, 51px);
+      font-weight: 400;
+      letter-spacing: -0.035em;
+      line-height: 1.08;
+      text-wrap: balance;
+    }
+
+    .headline-visual { display: block; }
+
+    .headline em {
+      display: inline-block;
+      color: var(--gold-bright);
+      font-style: italic;
+      font-weight: 400;
+      white-space: nowrap;
+      transition: opacity 0.42s var(--ease), transform 0.42s var(--ease);
+    }
+
+    .headline em.is-changing {
+      opacity: 0;
+      transform: translateY(0.28em);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .supporting-copy {
+      margin: 21px auto 0;
+      color: var(--parchment-dim);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .footer-link:focus-visible,
+    .header-brand:focus-visible {
+      outline: 2px solid var(--gold-bright);
+      outline-offset: 4px;
+    }
+
+    .site-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 16px 0 27px;
+      border-top: 1px solid rgba(139, 113, 62, 0.45);
+      color: var(--parchment-dim);
+      font-size: 9px;
+      line-height: 1.5;
+    }
+
+    .site-footer p { margin: 0; }
+    .footer-link { color: var(--gold); text-decoration: none; transition: color 0.25s ease; }
+    .footer-link:hover { color: var(--gold-bright); }
+
+    .js .mandala-shell { opacity: 0; }
+    .js .ring-draw { stroke-dashoffset: 1; }
+    .js .original-logo-core { opacity: 0; transform: translate(-50%, calc(-50% + 12px)); }
+    .js .wordmark-lockup { opacity: 0; transform: translateY(12px); }
+
+    .js .page-shell.is-ready .mandala-shell {
+      animation: ringReveal 1s var(--ease) 0.1s both;
+    }
+
+    .js .page-shell.is-ready .ring-draw {
+      animation: ringDraw 1s ease-out 0.12s both;
+    }
+
+    .js .page-shell.is-ready .original-logo-core {
+      animation: logoRise 1s var(--ease) 1.18s both;
+    }
+
+    .js .page-shell.is-ready .wordmark-lockup {
+      animation: wordmarkRise 1s var(--ease) 2.2s both;
+    }
+
+    .js .page-shell.is-ready .outer-orbit {
+      animation: orbit 110s linear 1.2s infinite;
+    }
+
+    @keyframes ringReveal {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes ringDraw {
+      from { stroke-dashoffset: 1; }
+      to { stroke-dashoffset: 0; }
+    }
+
+    @keyframes logoRise {
+      from { opacity: 0; transform: translate(-50%, calc(-50% + 12px)); }
+      to { opacity: 1; transform: translate(-50%, -50%); }
+    }
+
+    @keyframes wordmarkRise {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes orbit {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes statusPulse {
+      0%, 62%, 100% { box-shadow: 0 0 0 0 rgba(138, 58, 50, 0.42); }
+      78% { box-shadow: 0 0 0 5px rgba(138, 58, 50, 0); }
+    }
+
+    @media (max-width: 560px) {
+      .topbar, .site-footer { width: min(100% - 40px, 1120px); }
+      .topbar { padding-top: 25px; }
+      .main-content { padding: 17px 20px 48px; }
+      .emblem-stage { width: min(86vw, 360px); }
+      .sanctum-divider { height: 37px; margin-top: 23px; margin-bottom: 22px; }
+      .headline { font-size: clamp(32px, 9vw, 43px); }
+      .supporting-copy { margin-top: 18px; font-size: 13px; }
+      .site-footer { align-items: flex-start; flex-direction: column; gap: 7px; padding-bottom: 20px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .js .mandala-shell,
+      .js .original-logo-core,
+      .js .wordmark-lockup {
+        opacity: 1;
+        transform: none;
+      }
+
+      .js .ring-draw { stroke-dashoffset: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell" id="pageShell">
+    <header class="topbar">
+      <a class="header-brand" href="../index.html" aria-label="Sri Aadi Subramanya Group home">
+        <span>Sri Aadi Subramanya</span>
+        <small>Group</small>
+      </a>
+      <div class="quiet-status" aria-label="In quiet progress">
+        <span class="quiet-status__dot" aria-hidden="true"></span>
+        <span>In quiet progress</span>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="sanctum" aria-labelledby="coming-title">
+        <div class="emblem-stage" id="emblemStage" role="img" aria-label="A gold vel spear within a temple mandala">
+          <svg class="mandala" viewBox="0 0 400 400" aria-hidden="true">
+            <defs>
+              <path id="mandalaPetal" class="petal" d="M200 82 C190 96 190 109 200 122 C210 109 210 96 200 82 Z"></path>
+            </defs>
+
+            <g class="mandala-shell">
+              <g class="outer-orbit">
+                <circle class="ring ring--outer" cx="200" cy="200" r="174"></circle>
+                <circle class="ring ring--outer-detail" cx="200" cy="200" r="164"></circle>
+                <g class="ray">
+                  <path d="M200 20v13 M200 367v13 M20 200h13 M367 200h13"></path>
+                  <path d="m73 73 9 9 M318 318l9 9 M327 73l-9 9 M82 318l-9 9"></path>
+                </g>
+              </g>
+
+              <circle class="ring ring-draw" pathLength="1" cx="200" cy="200" r="151"></circle>
+              <circle class="ring ring--middle" cx="200" cy="200" r="137"></circle>
+
+              <g class="petal-ring">
+                <use href="#mandalaPetal"></use>
+                <use href="#mandalaPetal" transform="rotate(30 200 200)"></use>
+                <use href="#mandalaPetal" transform="rotate(60 200 200)"></use>
+                <use href="#mandalaPetal" transform="rotate(90 200 200)"></use>
+                <use href="#mandalaPetal" transform="rotate(120 200 200)"></use>
+                <use href="#mandalaPetal" transform="rotate(150 200 200)"></use>
+                <use href="#mandalaPetal" transform="rotate(180 200 200)"></use>
+                <use href="#mandalaPetal" transform="rotate(210 200 200)"></use>
+                <use href="#mandalaPetal" transform="rotate(240 200 200)"></use>
+                <use href="#mandalaPetal" transform="rotate(270 200 200)"></use>
+                <use href="#mandalaPetal" transform="rotate(300 200 200)"></use>
+                <use href="#mandalaPetal" transform="rotate(330 200 200)"></use>
+              </g>
+
+              <circle class="ring ring--inner" cx="200" cy="200" r="88"></circle>
+              <circle class="center-disc" cx="200" cy="200" r="55"></circle>
+            </g>
+          </svg>
+          <span class="original-logo-core" aria-hidden="true">
+            <img src="../assets/img/sri-aadi-subramanya-group-logo.png" alt="">
+          </span>
+        </div>
+
+        <div class="wordmark-lockup" aria-label="Sri Aadi Subramanya Group">
+          <span>SRI AADI SUBRAMANYA</span>
+          <span>GROUP</span>
+        </div>
+
+        <div class="sanctum-divider" aria-hidden="true"></div>
+
+        <h1 class="headline" id="coming-title">
+          <span class="sr-only">We're building the next chapter, with patience.</span>
+          <span class="headline-visual" aria-hidden="true">We're building the next chapter,<br><em id="cyclingPhrase">with patience</em></span>
+        </h1>
+
+        <p class="supporting-copy">Rooted in Karnataka.<br>Built for what comes next.</p>
+
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Sri Aadi Subramanya Group &middot; Karnataka, India</p>
+      <a class="footer-link" href="mailto:enquiries@sasgroupin.com">enquiries@sasgroupin.com</a>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var page = document.getElementById('pageShell');
+      var stage = document.getElementById('emblemStage');
+      var phrase = document.getElementById('cyclingPhrase');
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+      function begin() {
+        page.classList.add('is-ready');
+      }
+
+      if (document.readyState === 'complete') begin();
+      else window.addEventListener('load', begin, { once: true });
+
+      if (!reduceMotion && phrase) {
+        var phrases = ['with patience', 'with precision', 'with intention', 'with care'];
+        var phraseIndex = 0;
+
+        window.setInterval(function () {
+          phrase.classList.add('is-changing');
+          window.setTimeout(function () {
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            phrase.textContent = phrases[phraseIndex];
+            phrase.classList.remove('is-changing');
+          }, 430);
+        }, 2500);
+      }
+
+      if (finePointer && !reduceMotion && stage) {
+        stage.addEventListener('pointermove', function (event) {
+          var rect = stage.getBoundingClientRect();
+          var x = (event.clientX - rect.left) / rect.width - 0.5;
+          var y = (event.clientY - rect.top) / rect.height - 0.5;
+          stage.style.setProperty('--drift-x', (x * 7).toFixed(2) + 'px');
+          stage.style.setProperty('--drift-y', (y * 7).toFixed(2) + 'px');
+        });
+        stage.addEventListener('pointerleave', function () {
+          stage.style.setProperty('--drift-x', '0px');
+          stage.style.setProperty('--drift-y', '0px');
+        });
+      }
+    }());
+  </script>
+</body>
+</html>
