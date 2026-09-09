@@ -9,7 +9,7 @@
   <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <script>document.documentElement.classList.add('js');</script>
   <style>
     :root {
@@ -21,8 +21,8 @@
       --parchment: #F4ECDD;
       --parchment-dim: #B8AFA0;
       --maroon: #8A3A32;
-      --serif: "Fraunces", Georgia, serif;
-      --sans: "Sora", "Helvetica Neue", Arial, sans-serif;
+      --serif: "Cormorant Garamond", "Palatino Linotype", Georgia, serif;
+      --sans: "Inter", "Helvetica Neue", Arial, sans-serif;
       --ease: cubic-bezier(0.22, 1, 0.36, 1);
     }
 
@@ -38,6 +38,7 @@
       font-weight: 300;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
+      font-feature-settings: "kern" 1, "liga" 1;
       overflow-x: hidden;
     }
 
@@ -92,10 +93,10 @@
 
     .header-brand {
       color: var(--parchment);
-      font-family: var(--sans);
-      font-size: 10px;
+      font-family: var(--serif);
+      font-size: 14px;
       font-weight: 500;
-      letter-spacing: 0.13em;
+      letter-spacing: 0.18em;
       line-height: 1.45;
       text-decoration: none;
       text-transform: uppercase;
@@ -105,6 +106,7 @@
     .header-brand small {
       display: block;
       color: var(--gold);
+      font-family: var(--sans);
       font-size: 8px;
       font-weight: 400;
       letter-spacing: 0.38em;
@@ -251,10 +253,10 @@
       margin: 0 auto;
       color: var(--parchment);
       font-family: var(--serif);
-      font-size: clamp(35px, 5.3vw, 51px);
-      font-weight: 400;
-      letter-spacing: -0.035em;
-      line-height: 1.08;
+      font-size: clamp(39px, 5.8vw, 60px);
+      font-weight: 500;
+      letter-spacing: 0.005em;
+      line-height: 1.01;
       text-wrap: balance;
     }
 
@@ -264,7 +266,7 @@
       display: inline-block;
       color: var(--gold-bright);
       font-style: italic;
-      font-weight: 400;
+      font-weight: 500;
       white-space: nowrap;
       transition: opacity 0.42s var(--ease), transform 0.42s var(--ease);
     }
@@ -289,8 +291,9 @@
     .supporting-copy {
       margin: 21px auto 0;
       color: var(--parchment-dim);
-      font-size: 14px;
-      line-height: 1.75;
+      font-size: 13px;
+      letter-spacing: 0.005em;
+      line-height: 1.8;
     }
 
     .footer-link:focus-visible,
@@ -375,7 +378,7 @@
       .main-content { padding: 17px 20px 48px; }
       .emblem-stage { width: min(86vw, 360px); }
       .sanctum-divider { height: 37px; margin-top: 23px; margin-bottom: 22px; }
-      .headline { font-size: clamp(32px, 9vw, 43px); }
+      .headline { font-size: clamp(35px, 10vw, 48px); }
       .supporting-copy { margin-top: 18px; font-size: 13px; }
       .site-footer { align-items: flex-start; flex-direction: column; gap: 7px; padding-bottom: 20px; }
     }
@@ -402,7 +405,7 @@
 <body>
   <div class="page-shell" id="pageShell">
     <header class="topbar">
-      <a class="header-brand" href="../index.html" aria-label="Sri Aadi Subramanya Group home">
+      <a class="header-brand" href="/" aria-label="Sri Aadi Subramanya Group home">
         <span>Sri Aadi Subramanya</span>
         <small>Group</small>
       </a>
